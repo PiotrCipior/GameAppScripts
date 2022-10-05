@@ -11,8 +11,8 @@ public class Buy : MonoBehaviour
     public Text prawy;
     public GameObject OnButton;
     public GameObject button;
-    public static int marcin = 0;
-    public static int marcin2 = 0;
+    public static int item = 0;
+    public static int item2 = 0;
 
     void Update()
     {
@@ -27,8 +27,8 @@ public class Buy : MonoBehaviour
             iks.SetActive(true);
             prawy.text = "Bought";
             Destroy(button);
-            marcin = 1;
-            marcin2 = 1;
+            item = 1;
+            item2 = 1;
         }
     }
 }
