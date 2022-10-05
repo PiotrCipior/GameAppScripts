@@ -8,8 +8,8 @@ public class Click : MonoBehaviour
 {
     public Text myText;
     public static int value = 0;
-    private static int marcin;
-    private static int marcin2=0;
+    private static int item;
+    private static int item2=0;
     int koszt = 20;
     public AudioClip klik;
 
@@ -22,9 +22,9 @@ public class Click : MonoBehaviour
 
     void FixedUpdate()
     {
-        marcin = Buy.marcin;
-        marcin2 = Buy.marcin2;
-        if (marcin2 == 1 && koszt ==20)
+        item = Buy.item;
+        item2 = Buy.item2;
+        if (item2 == 1 && koszt ==20)
         {
             value-=20;
             koszt = 0;
@@ -39,7 +39,7 @@ public class Click : MonoBehaviour
 
     void OnMouseDown()
     {
-        value += 1 + marcin;
+        value += 1 + item;
         GetComponent<AudioSource> ().Play ();
         myText.text = "" + value;
     }
