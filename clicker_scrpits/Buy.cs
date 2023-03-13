@@ -7,8 +7,8 @@ public class Buy : MonoBehaviour
 {
     private Click myOtherClass;
     private static int value;
-    public GameObject iks;
-    public Text prawy;
+    public GameObject cross;
+    public Text right;
     public GameObject OnButton;
     public GameObject button;
     public static int item = 0;
@@ -24,8 +24,8 @@ public class Buy : MonoBehaviour
         if (value >= 20)
         {
             OnButton.SetActive(true);
-            iks.SetActive(true);
-            prawy.text = "Bought";
+            cross.SetActive(true);
+            right.text = "Bought";
             Destroy(button);
             item = 1;
             item2 = 1;
