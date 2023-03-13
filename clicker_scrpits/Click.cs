@@ -9,25 +9,25 @@ public class Click : MonoBehaviour
     public Text myText;
     public static int value = 0;
     private static int item;
-    private static int item2=0;
-    int koszt = 20;
-    public AudioClip klik;
+    private static int item2 = 0;
+    int price = 20;
+    public AudioClip click;
 
 
     void start ()
     {
         GetComponent<AudioSource>().playOnAwake = false;
-        GetComponent<AudioSource>().clip = klik;
+        GetComponent<AudioSource>().clip = click;
     }
 
     void FixedUpdate()
     {
         item = Buy.item;
         item2 = Buy.item2;
-        if (item2 == 1 && koszt ==20)
+        if (item2 == 1 && price ==20)
         {
             value-=20;
-            koszt = 0;
+            price = 0;
         }
         myText.text = "" + value;
 
