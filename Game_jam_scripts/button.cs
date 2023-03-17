@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class button : MonoBehaviour
 {
-    public GameObject drzwi;
-    public GameObject guzik;
+    public GameObject door;
+    public GameObject button;
 
-    void OnTriggerEnter2D(Collider2D guzik)
+    void OnTriggerEnter2D(Collider2D button)
     {
-            drzwi.SetActive(false);
+            door.SetActive(false);
     }
 }
