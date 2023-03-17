@@ -11,7 +11,7 @@ public class SPlayerMovement : MonoBehaviour {
 
 	float horizontalMove = 0f;
 	bool jump = false;
-	private Rigidbody2D m_Rigidbody2D;
+	private Rigidbody2D rigidbody2D;
 	private int i = 1;
 	private Vector3 startscale = new Vector3(0.4f, 0.4f, 0.0f);
 	private Vector3 scaleChange;
@@ -27,7 +27,7 @@ public class SPlayerMovement : MonoBehaviour {
 
 	private void Awake()
 	{
-		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		rigidbody2D = GetComponent<Rigidbody2D>();
 	}
 
 	// Update is called once per frame
@@ -49,7 +49,7 @@ public class SPlayerMovement : MonoBehaviour {
 		{
 			if (i>=1 && i<3)
 				{
-					if (m_Rigidbody2D.transform.localScale.x>0)
+					if (rigidbody2D.transform.localScale.x>0)
 					{
 						scaleChange = new Vector3(0.2f, 0.2f, 0.0f);
 					}
@@ -57,8 +57,8 @@ public class SPlayerMovement : MonoBehaviour {
 					{
 						scaleChange = new Vector3(-0.2f, 0.2f, 0.0f);
 					}
-					m_Rigidbody2D.transform.position += positionChange;
-					m_Rigidbody2D.transform.localScale += scaleChange;
+					rigidbody2D.transform.position += positionChange;
+					rigidbody2D.transform.localScale += scaleChange;
 					i++;
 				}
 		}
@@ -66,7 +66,7 @@ public class SPlayerMovement : MonoBehaviour {
 		{
 			if (i>1 && i<=3)
             {
-                if (m_Rigidbody2D.transform.localScale.x>0)
+                if (rigidbody2D.transform.localScale.x>0)
                 {
                     scaleChange = new Vector3(-0.2f, -0.2f, 0.0f);
                 }
@@ -74,8 +74,8 @@ public class SPlayerMovement : MonoBehaviour {
                 {
                     scaleChange = new Vector3(0.2f, -0.2f, 0.0f);
                 }
-				m_Rigidbody2D.transform.position -= positionChange;
-                m_Rigidbody2D.transform.localScale += scaleChange;
+				rigidbody2D.transform.position -= positionChange;
+                rigidbody2D.transform.localScale += scaleChange;
                 i--;
             }
 		}
